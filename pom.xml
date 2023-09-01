@@ -27,7 +27,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
 			<exclusions>
 				<exclusion>
 					<groupId>org.junit.vintage</groupId>
@@ -50,14 +49,15 @@
 			<version>1.8.1.Final</version>
 		</dependency>
 		<dependency>
-			<groupId>io.quarkus</groupId>
+			<groupId>io.quarkus</groupId><!--exhortignore-->
 			<artifactId>quarkus-vertx-http</artifactId>
 			<version>2.13.5.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-jdbc-postgresql</artifactId>
-			<version>2.13.6.Final</version><!--exhortignore-->
+			<version>2.13.6.Final</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 
