@@ -16,13 +16,13 @@
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>11</java.version>
+		<java.version>17</java.version>
 	</properties>
-	<repositories>
+<repositories>
    <repository>
       <id>jboss-eap-repository-group</id>
       <name>JBoss EAP Maven Repository</name>
-      <url>file:///home/rajanr/Downloads/jboss-eap-7.0.0-maven-repository/jboss-eap-7.0.0.GA-maven-repository/maven-repository/</url>
+      <url>https://maven.repository.redhat.com/ga</url>
       <layout>default</layout>
       <releases>
          <enabled>true</enabled>
@@ -33,7 +33,7 @@
          <updatePolicy>never</updatePolicy>
       </snapshots>
    </repository>
-</repositories>
+</repositories> 
 	<dependencies>
 		<dependency>
 			<groupId>io.quarkus</groupId>
@@ -45,18 +45,12 @@
 			<artifactId>quarkus-oidc</artifactId>
 			<version>2.13.8.Final-redhat-00006</version>
 		</dependency>
-		<dependency>
-			<groupId>io.quarkus</groupId>
-			<artifactId>quarkus-oidc-client</artifactId>
-			<version>2.13.7.Final</version>
-		</dependency>
-		<dependency>
+		<dependency> <!--exhortignore-->
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-saml-core</artifactId>
 			<version>1.8.1.Final</version>
-			<scope>compile</scope>
 		</dependency>
-		<dependency>
+		<dependency> <!--exhortignore-->
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
 			<version>1.1.10</version>
@@ -65,16 +59,13 @@
 			<groupId>org.apache.james</groupId>
 			<artifactId>apache-mime4j-storage</artifactId>
 			<version>0.8.8</version>
-		</dependency>
-		<dependency>
-			<groupId>io.quarkus</groupId>
-			<artifactId>quarkus-vertx-http</artifactId>
-			<version>2.13.5.Final</version>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.minidev</groupId>
 			<artifactId>json-smart</artifactId>
 			<version>2.3</version>
+			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.codehaus.jettison</groupId>
@@ -197,17 +188,4 @@
 			<version>2.13.7.Final</version>
 		</dependency>
 	</dependencies>
-	<pluginRepositories>
-   <pluginRepository>
-      <id>jboss-eap-repository-group</id>
-      <name>JBoss EAP Maven Repository</name>
-      <url>file:///home/rajanr/Downloads/jboss-eap-7.0.0-maven-repository/jboss-eap-7.0.0.GA-maven-repository/maven-repository/</url>
-      <releases>
-         <enabled>true</enabled>
-      </releases>
-      <snapshots>
-         <enabled>true</enabled>
-      </snapshots>
-   </pluginRepository>
-</pluginRepositories>
 </project>
