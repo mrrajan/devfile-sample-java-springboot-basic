@@ -18,11 +18,11 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
-	<repositories>
+<repositories>
    <repository>
       <id>jboss-eap-repository-group</id>
       <name>JBoss EAP Maven Repository</name>
-      <url>file:///home/rajanr/Downloads/jboss-eap-7.0.0-maven-repository/jboss-eap-7.0.0.GA-maven-repository/maven-repository/</url>
+      <url>https://maven.repository.redhat.com/ga</url>
       <layout>default</layout>
       <releases>
          <enabled>true</enabled>
@@ -46,15 +46,9 @@
 			<version>2.13.8.Final-redhat-00006</version>
 		</dependency>
 		<dependency>
-			<groupId>io.quarkus</groupId>
-			<artifactId>quarkus-oidc-client</artifactId>
-			<version>2.13.7.Final</version>
-		</dependency>
-		<dependency>
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-saml-core</artifactId>
 			<version>1.8.1.Final</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
@@ -69,7 +63,7 @@
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-vertx-http</artifactId>
-			<version>2.13.5.Final</version>
+			<version>2.13.9.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>net.minidev</groupId>
@@ -189,7 +183,7 @@
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-keycloak-authorization</artifactId>
-			<version>2.13.7.Final</version>
+			<version>2.13.8.Final-redhat-00006</version>
 		</dependency>
 		<dependency>
 			<groupId>io.quarkus</groupId>
@@ -197,17 +191,4 @@
 			<version>2.13.7.Final</version>
 		</dependency>
 	</dependencies>
-	<pluginRepositories>
-   <pluginRepository>
-      <id>jboss-eap-repository-group</id>
-      <name>JBoss EAP Maven Repository</name>
-      <url>file:///home/rajanr/Downloads/jboss-eap-7.0.0-maven-repository/jboss-eap-7.0.0.GA-maven-repository/maven-repository/</url>
-      <releases>
-         <enabled>true</enabled>
-      </releases>
-      <snapshots>
-         <enabled>true</enabled>
-      </snapshots>
-   </pluginRepository>
-</pluginRepositories>
 </project>
