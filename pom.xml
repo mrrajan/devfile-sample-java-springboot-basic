@@ -38,19 +38,19 @@
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-resteasy</artifactId>
-			<version>2.13.8.Final-redhat-00006</version>
+			<version>2.13.7.Final</version>
 		</dependency>
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-oidc</artifactId>
-			<version>2.13.8.Final-redhat-00006</version>
+			<version>2.13.7.Final</version>
 		</dependency>
-		<dependency> <!--exhortignore-->
+		<dependency> 
 			<groupId>org.keycloak</groupId>
 			<artifactId>keycloak-saml-core</artifactId>
 			<version>1.8.1.Final</version>
 		</dependency>
-		<dependency> <!--exhortignore-->
+		<dependency> 
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-core</artifactId>
 			<version>1.1.10</version>
@@ -186,6 +186,11 @@
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-csrf-reactive</artifactId>
 			<version>2.13.7.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-vertx-http</artifactId>
+			<version>2.13.8.Final-redhat-00006</version>
 		</dependency>
 	</dependencies>
 </project>
