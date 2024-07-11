@@ -1,0 +1,36 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'application'
+    id 'org.javamodularity.moduleplugin' version '1.8.12'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
+    id 'org.beryx.jlink' version '2.25.0'
+}
+group = 'org.acme.dbaas'
+version = '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+ext {
+    junitVersion = '5.9.1'
+}
+
+dependencies {
+    testCompileOnly "io.quarkus:quarkus-jdbc-postgresql:2.13.5.Final"
+    testRuntimeOnly "io.quarkus:quarkus-hibernate-orm-deployment:2.0.2.Final"
+    testImplementation 'com.h2database:h2:2.1.214'
+    implementation 'org.xerial:sqlite-jdbc:3.39.3.0' // exhortignore
+    runtimeOnly group: 'log4j', name: 'log4j', version:"1.2.17"
+    compileOnly "io.quarkus:quarkus-resteasy-multipart:2.13.7.Final"
+    implementation "io.quarkus:quarkus-resteasy:2.13.5.Final"
+    implementation "io.quarkus:quarkus-vertx-http:2.13.5.Final"
+    implementation "io.quarkus:quarkus-resteasy-jackson:2.13.5.Final"
+    implementation "io.quarkus:quarkus-hibernate-orm:2.13.5.Final"
+    implementation "io.quarkus:quarkus-agroal:2.13.5.Final"
+    implementation "io.quarkus:quarkus-kubernetes-service-binding:2.13.5.Final"
+    
+}
+test {
+    useJUnitPlatform()
+}
